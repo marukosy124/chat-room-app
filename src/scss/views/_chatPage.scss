@@ -1,0 +1,162 @@
+.chat {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-image: linear-gradient(141deg, $secondary, $primary);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: $font;
+    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.53) 100%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 50px 60px 100px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(70px);
+    .icon {
+      color: white;
+    }
+    button {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.616);
+      border-left: 0;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.4) 50%
+        );
+        background-size: 210% 100%;
+        background-position: right bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+      }
+      &:hover {
+        background-color: $component;
+      }
+      &:hover:before {
+        background-position: left bottom;
+      }
+    }
+  }
+
+  .message-window {
+    flex-grow: 2;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 10px;
+
+    .message {
+      p {
+        display: inline-block;
+        border-radius: 1.2rem;
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+        text-align: left;
+        max-width: 70%;
+      }
+    }
+
+    .system-message {
+      @extend .message;
+      text-align: center;
+      color: $font;
+      p {
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0.53) 100%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        text-align: center;
+      }
+    }
+
+    .sent-message {
+      @extend .message;
+      text-align: right;
+      p {
+        color: $font;
+        background: rgba(255, 255, 255, 0.856);
+      }
+    }
+
+    .received-message {
+      @extend .message;
+      .sender {
+        color: #808080;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+      text-align: left;
+      p {
+        background: $font;
+        color: rgba(255, 255, 255, 0.856);
+      }
+    }
+  }
+
+  .message-input {
+    display: flex;
+    padding: 10px;
+
+    input {
+      width: 90%;
+      border-bottom-right-radius: 0px;
+      border-top-right-radius: 0px;
+      opacity: 80%;
+      border: 1px solid white;
+      box-shadow: 0 4px 15px 0 #bbabe6;
+    }
+
+    button {
+      width: 10%;
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0px;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.616);
+      border-left: 0;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.4) 50%
+        );
+        background-size: 210% 100%;
+        background-position: right bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+      }
+      &:hover {
+        background-color: $primary;
+      }
+      &:hover:before {
+        background-position: left bottom;
+      }
+    }
+  }
+}

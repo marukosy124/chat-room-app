@@ -1,0 +1,12 @@
+@import "base/variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "views/loginPage";
+@import "views/chatPage";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+$font-stack: Rubik, sans-serif;
+
+body {
+  font: 100% $font-stack;
+}
+

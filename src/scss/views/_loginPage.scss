@@ -1,0 +1,74 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(141deg, $secondary, $primary);
+
+  $width: 50vw;
+  $height: 30vh;
+
+  .login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height / 2;
+    margin-left: -$width / 2;
+    width: $width;
+    height: $height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+    border: 1px solid rgb(233, 233, 233);
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.53) 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 50px 60px 100px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(70px);
+    border-radius: 20px;
+
+    .error-message {
+      color: $font;
+      padding: 5px 2px;
+      min-height: 25px;
+    }
+
+    button {
+      border: 0;
+      color: white;
+      outline: none;
+      position: relative;
+      width: 200px;
+      padding: 15px;
+      border-radius: 30px;
+      margin-top: 20px;
+      align-self: center;
+      box-shadow: 0 4px 15px 0 #bbabe6;
+      &:before {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.4) 50%
+        );
+        background-size: 210% 100%;
+        background-position: right bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 50px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+      }
+      &:hover:before {
+        background-position: left bottom;
+      }
+    }
+  }
+}
