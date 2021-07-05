@@ -1,6 +1,9 @@
 ## Abstract
 A chat room app using React and Socket.io
 
+## Demo
+<img src="https://github.com/marukosy124/chat-room-app/blob/master/chatroom_demo.gif">
+
 ## Setup
 1. Install yarn packages
     ```bash
