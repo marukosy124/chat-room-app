@@ -1,5 +1,5 @@
-# Room Chat App
-A room chat app using React and Socket.io
+## Abstract
+A chat room using React and Socket.io
 
 ## Setup
 1. Install yarn packages
