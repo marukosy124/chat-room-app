@@ -6,6 +6,7 @@ A chat room app using React and Socket.io
 
 - [x] group chat in different rooms
 - [x] log in and out 
+- [x] press enter to login and send message
 - [x] "kinda" glassmorhpism UI and button hover effect
 - [x] responsiveness
 
