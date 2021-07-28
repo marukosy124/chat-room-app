@@ -1,7 +1,7 @@
-## Abstract
+# About
 A chat room app using React and Socket.io
 
-## Demo
+# Demo
 <img src="https://github.com/marukosy124/chat-room-app/blob/master/chatroom_demo.gif">
 
 - [x] group chat in different rooms
@@ -10,7 +10,7 @@ A chat room app using React and Socket.io
 - [x] "kinda" glassmorhpism UI and button hover effect
 - [x] responsiveness
 
-## Setup
+# Setup
 1. Install yarn packages
     ```bash
     yarn install
