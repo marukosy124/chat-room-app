@@ -1,5 +1,5 @@
 # About
-A chat room app using React and Socket.io
+A chat room app using React, Redux and Socket.io
 
 # Demo
 <img src="https://github.com/marukosy124/chat-room-app/blob/master/chatroom_demo.gif">
